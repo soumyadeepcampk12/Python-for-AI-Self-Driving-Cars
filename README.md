@@ -1,4 +1,4 @@
-# Python Projects for 5-12 Grade
+# Python Projects for 5-12 Grade students
 These are the projects done by me while teaching Python to kids from 5-12 grades. The list is as follows:-
 1. Simple Calculator
 2. Temperature Converter
