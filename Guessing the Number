@@ -1,0 +1,30 @@
+#install random module using pip install random and import it to select random numbers
+import random
+#from random module import the randint(), the function that selects a random number within a range of integers and store it in this variable
+number = random.randint(1, 10) 
+
+#storing the input(name of the player) in a variable
+player_name = input("Hello, What's your name?")
+#variable to keep a count of the number of guesses made
+number_of_guesses = 0 
+#print the string concatenation
+print('okay! '+ player_name+ ' I am Guessing a number between 1 and 10. Can you tell me the number? ') 
+
+#loop to keep a count of the chances given which here is 5
+while number_of_guesses < 5:
+    #variable to store number guesses by the player
+    guess = int(input())
+    #the condition loop will terminate only when the number of chances are over or the player has guessed it correctly in the given number of chances
+    number_of_guesses += 1
+    if guess < number:
+        print('Your guess is too low')
+    if guess > number:
+        print('Your guess is too high')
+    if guess == number:
+        break
+
+#after coming out from the loop the computer gives a conclusion using conditional statement
+if guess == number:
+    print('Congrats! You guessed the number in ' + str(number_of_guesses) + ' tries!')
+else:
+    print('Sorry, you could not guess the number. The number was ' + str(number))
