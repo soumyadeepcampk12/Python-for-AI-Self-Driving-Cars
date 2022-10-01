@@ -10,13 +10,13 @@ number_of_guesses = 0
 #print the string concatenation
 print('okay! '+ player_name+ ' I am Guessing a number between 1 and 10. Can you tell me the number? ') 
 
-#loop to give the player a chance for each turn and keep a count of it
+#loop to give the player a chance for each turn
 while number_of_guesses < 5:
-    #variable to store the user input number
+    #variable to store the user input 
     guess = int(input())
-    #for each turn the value increases & the number of chances decreases by 1
+    #for each turn the value increases & the number of chances left decreases by 1
     number_of_guesses += 1
-    #conditional statements to compare the user input and the computer selected random number
+    #conditional statements to compare the user input and the computer selected number
     if guess < number:
         print('Your guess is too low')
     if guess > number:
@@ -24,8 +24,8 @@ while number_of_guesses < 5:
     if guess == number:
         break
 
-#the program comes out of the loop only when the number of turns are over or the player has made a correct guess
-#after coming out the final conclusions
+#the program comes out of the looping condition no longer holds true or the player made a correct guess
+#after coming out the loop
 if guess == number:
     print('Congrats! You guessed the number in ' + str(number_of_guesses) + ' tries!')
 else:
