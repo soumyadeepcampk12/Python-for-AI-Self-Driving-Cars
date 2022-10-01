@@ -1,21 +1,22 @@
 #install random module using pip install random and import it to select random numbers
 import random
-#from random module import the randint(), the function that selects a random number within a range of integers and store it in this variable
+#the random number here is an integer so we use the randint() statement from the random module to generate a random integer in the range
 number = random.randint(1, 10) 
 
 #storing the input(name of the player) in a variable
 player_name = input("Hello, What's your name?")
-#variable to keep a count of the number of guesses made
+#variable to keep a count of the number of guesses made 
 number_of_guesses = 0 
 #print the string concatenation
 print('okay! '+ player_name+ ' I am Guessing a number between 1 and 10. Can you tell me the number? ') 
 
-#loop to keep a count of the chances given which here is 5
+#loop to give the player a chance for each turn and keep a count of it
 while number_of_guesses < 5:
-    #variable to store number guesses by the player
+    #variable to store the user input number
     guess = int(input())
-    #the condition loop will terminate only when the number of chances are over or the player has guessed it correctly in the given number of chances
+    #for each turn the value increases & the number of chances decreases by 1
     number_of_guesses += 1
+    #conditional statements to compare the user input and the computer selected random number
     if guess < number:
         print('Your guess is too low')
     if guess > number:
@@ -23,7 +24,8 @@ while number_of_guesses < 5:
     if guess == number:
         break
 
-#after coming out from the loop the computer gives a conclusion using conditional statement
+#the program comes out of the loop only when the number of turns are over or the player has made a correct guess
+#after coming out the final conclusions
 if guess == number:
     print('Congrats! You guessed the number in ' + str(number_of_guesses) + ' tries!')
 else:
